@@ -13,7 +13,6 @@ import AppBar from  './components/AppBar1'
 const {useState} = React; 
 
 
-const {useState} = React;
  
 
 function App() {
@@ -35,9 +34,7 @@ function App() {
                     placeholder="Enter email"
                 />
                 <Dashboard />
-            
-
-      
+                  
             
 
         </div>
