@@ -12,15 +12,15 @@ import AppBar from  './components/AppBar1'
 
 const {useState} = React; 
 
+
+const {useState} = React;
+ 
+
 function App() {
     const [counter, setCounter] = useState(0);
     return (
         <div className="App"> 
-
-         
              <AppBar />
-          
-
                 <p>
                     {counter}
                 </p>
