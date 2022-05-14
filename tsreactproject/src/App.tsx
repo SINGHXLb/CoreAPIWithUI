@@ -24,8 +24,8 @@ function App() {
     }
 
     return (
-        <div className ="App">
-            <AppBar/>
+        <div className="App">
+            <AppBar setToken={setToken} />
             <BrowserRouter>  
                 <Routes>
                     <Route path="/preferences" element={<Preferences />} />
