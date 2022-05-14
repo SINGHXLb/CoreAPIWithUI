@@ -18,7 +18,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({setToken}) => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -34,8 +34,16 @@ const ResponsiveAppBar = () => {
     };
 
     const handleCloseUserMenu = () => {
+
+        
         setAnchorElUser(null);
+         
+
     };
+
+    const MenuAction = () =>{
+        setToken("");
+    } 
 
     return (
         <AppBar position="static">
@@ -150,7 +158,7 @@ const ResponsiveAppBar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                <MenuItem key={setting} onClick={MenuAction}>
                                     <Typography textAlign="center">{setting}</Typography>
                                 </MenuItem>
                             ))}
