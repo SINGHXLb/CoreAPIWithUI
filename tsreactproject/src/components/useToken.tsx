@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 export default function useToken() {
+
     const getToken = () => {
         const tokenString = localStorage.getItem('token');
         console.log("userToken.ts token value" + (tokenString === null) ? "" : tokenString );
@@ -16,9 +17,13 @@ export default function useToken() {
         setToken(userToken.token);
     };
 
+    const logout = () => {
+        setToken("");
+    };
+
     return {
         setToken: saveToken,
+        logout: logout,
         token
     }
-    
 }
