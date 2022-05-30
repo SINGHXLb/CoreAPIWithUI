@@ -1,7 +1,11 @@
 import React from 'react';
+import FormA from './FormA';
 
-export default function Dashboard() {
+const Dashboard=() => {
     return (
-        <h2>Dashboard</h2>
+        <div> 
+         <FormA/>
+        </div>
     );
 }
+export default Dashboard;

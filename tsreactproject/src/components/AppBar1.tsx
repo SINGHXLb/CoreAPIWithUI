@@ -27,6 +27,7 @@ const ResponsiveAppBar = ({setToken}) => {
     };
     const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElUser(event.currentTarget);
+       
     };
 
     const handleCloseNavMenu = () => {
